@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Il Gusto emblem">
+  <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <text x="50" y="64" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="52" font-weight="600" fill="currentColor">G</text>
+  <line x1="26" y1="78" x2="74" y2="78" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <text x="50" y="88" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="6.2" letter-spacing="2" fill="currentColor">EST. 1998</text>
+</svg>

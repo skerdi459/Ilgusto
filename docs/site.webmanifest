@@ -1,0 +1,12 @@
+{
+  "name": "Il Gusto Ristorante & Pizzeria",
+  "short_name": "Il Gusto",
+  "description": "Italian ristorante & pizzeria — fresh seafood, hand-made pasta and fine wine since 1998.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf6ee",
+  "theme_color": "#14523a",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
