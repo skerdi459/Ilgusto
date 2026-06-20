@@ -1,7 +1,8 @@
 {
   "name": "Il Gusto Ristorante & Pizzeria",
   "short_name": "Il Gusto",
-  "description": "Italian ristorante & pizzeria — fresh seafood, hand-made pasta and fine wine since 1998.",
+  "description": "Ristorante di pesce e pizzeria a Pietra Ligure (SV) — pescato fresco, pasta fatta a mano e vini dal 1998.",
+  "lang": "it",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#faf6ee",

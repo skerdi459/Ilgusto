@@ -118,10 +118,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.08; mar
 
 /* Dimmed backdrop behind the slide-in panel */
 .nav-backdrop {
-  position: fixed; inset: 0; z-index: 40; background: rgba(11,22,17,.55);
-  backdrop-filter: blur(2px); opacity: 0; visibility: hidden;
+  position: fixed; inset: 0; z-index: 45; background: rgba(11,22,17,.55);
+  backdrop-filter: blur(2px); opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .35s ease, visibility .35s ease;
 }
+.nav-backdrop.show { pointer-events: auto; }
+/* While the slide-in menu is open, drop the header's backdrop-filter. A filtered
+   ancestor becomes the containing block for the fixed panel, which collapsed it to
+   the header's height (only the first link showed). Removing it lets the panel fill
+   the viewport again. */
+body.nav-locked .site-header { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
 .nav-backdrop.show { opacity: 1; visibility: visible; }
 body.nav-locked { overflow: hidden; }
 
@@ -181,7 +187,7 @@ body.nav-locked { overflow: hidden; }
 .gallery { background: var(--cream); }
 .masonry { columns: 3; column-gap: 16px; }
 .masonry img {
-  width: 100%; margin: 0 0 16px; border-radius: 4px; break-inside: avoid;
+  width: 100%; height: auto; margin: 0 0 16px; border-radius: 4px; break-inside: avoid;
   box-shadow: 0 10px 30px -18px rgba(0,0,0,.5); transition: transform .4s ease, filter .4s ease; cursor: pointer;
 }
 .masonry img:hover { transform: scale(1.02); filter: brightness(1.05); }
@@ -233,7 +239,15 @@ body.nav-locked { overflow: hidden; }
 .hours-list li span:last-child { color: var(--ink-soft); }
 .hours-list li.today { font-weight: 600; }
 .hours-list li.today span:last-child { color: var(--green); }
-.map-embed { border-radius: 4px; overflow: hidden; box-shadow: var(--shadow); min-height: 320px; height: 100%; border: 0; width: 100%; }
+.map-wrap { display: flex; flex-direction: column; gap: 14px; height: 100%; }
+.map-embed { border-radius: 4px; overflow: hidden; box-shadow: var(--shadow); min-height: 320px; flex: 1; border: 0; width: 100%; }
+.map-cta { align-self: flex-start; }
+@media (max-width: 920px) { .map-cta { align-self: stretch; justify-content: center; } }
+.reserve-box { margin-top: 26px; padding: 22px 24px; border-radius: 6px; background: var(--cream); border: 1px solid var(--line); }
+.reserve-box h3 { margin: 0 0 6px; font-size: 1.3rem; color: var(--green-deep); }
+.reserve-box p { margin: 0 0 16px; color: var(--ink-soft); font-size: .96rem; }
+.reserve-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.reserve-actions .btn { flex: 1 1 auto; justify-content: center; }
 .contact-socials { display: flex; gap: 14px; margin-top: 22px; }
 .contact-socials a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--green); transition: .25s; }
 .contact-socials a:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
@@ -274,10 +288,11 @@ body.nav-locked { overflow: hidden; }
   .nav-links {
     position: fixed; inset: 0 0 0 auto; width: min(82vw, 340px);
     background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
-    flex-direction: column; align-items: stretch; justify-content: center;
-    padding: 88px 36px 40px; gap: 4px; transform: translateX(105%);
+    flex-direction: column; align-items: stretch; justify-content: flex-start;
+    padding: 84px 36px 40px; gap: 2px; transform: translateX(105%);
     transition: transform .4s cubic-bezier(.4,0,.2,1);
     box-shadow: -24px 0 60px rgba(0,0,0,.45);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
   }
   .nav-links.open { transform: none; }
   .nav-links li { border-bottom: 1px solid rgba(255,255,255,.1); }

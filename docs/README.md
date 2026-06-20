@@ -26,17 +26,15 @@ python3 -m http.server 8080
 ```
 Then open http://localhost:8080
 
-## ⚠️ Before going live — replace the placeholders
-Search the project for these and swap in real values:
+## Live URLs & SEO
+Canonical/sitemap/Open Graph URLs point to the GitHub Pages address
+`https://skerdi459.github.io/Ilgusto/`. If you move to a custom domain,
+search-and-replace that base URL in `index.html`, `menu.html`, `robots.txt`
+and `sitemap.xml`, and add a `CNAME` file in `docs/`.
 
-1. **Domain** — replace `https://www.ilgusto-ristorante.com` everywhere
-   (in `index.html`, `menu.html`, `robots.txt`, `sitemap.xml`) with your real domain.
-2. **Contact details** — in `index.html`, look for the `TODO` comments:
-   - Address, phone (`+00 000 000 0000`), email
-   - The `hours-list` opening hours
-   - Social links (`#` for Instagram/Facebook, the WhatsApp number)
-3. **Google Map** — the map currently uses a placeholder OpenStreetMap embed.
-   Replace the `<iframe>` `src` with your Google Maps embed
+Real contact details (address Via Rossello 22, Pietra Ligure SV · phone
+392 8080172 · email Ilgusto77@gmail.com · Instagram il.gusto1998) and the
+Google Maps embed are already wired in.
    (Google Maps → your restaurant → Share → *Embed a map* → copy the `src`).
 4. **Structured data (SEO)** — in the `<script type="application/ld+json">` block in
    `index.html`, update `telephone`, `email`, `address`, `geo` coordinates and `sameAs`

@@ -11,7 +11,8 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav toggle
+  // Mobile nav toggle — uses event delegation so the toggle always responds,
+  // even if elements are re-rendered or scripts load in an unexpected order.
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
   if (toggle && links) {
@@ -34,15 +35,27 @@
       document.body.classList.remove("nav-locked");
       toggle.setAttribute("aria-expanded", "false");
     }
-    function toggleNav() {
-      links.classList.contains("open") ? closeNav() : openNav();
+    function isOpen() {
+      return links.classList.contains("open");
     }
 
-    toggle.addEventListener("click", toggleNav);
-    backdrop.addEventListener("click", closeNav);
-    links.addEventListener("click", function (e) {
-      if (e.target.closest("a")) closeNav();
+    // Single delegated click handler covers the toggle (and its inner <span>s),
+    // the backdrop, and any link inside the panel.
+    document.addEventListener("click", function (e) {
+      if (e.target.closest(".nav-toggle")) {
+        e.preventDefault();
+        isOpen() ? closeNav() : openNav();
+        return;
+      }
+      if (e.target.closest(".nav-backdrop")) {
+        closeNav();
+        return;
+      }
+      if (isOpen() && e.target.closest(".nav-links a")) {
+        closeNav();
+      }
     });
+
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeNav();
     });

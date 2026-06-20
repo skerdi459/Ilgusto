@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ilgusto-ristorante.com/sitemap.xml
+Sitemap: https://skerdi459.github.io/Ilgusto/sitemap.xml
