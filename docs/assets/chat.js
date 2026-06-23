@@ -7,8 +7,7 @@
   var PHONE_DISPLAY = "392 8080172";
   var PHONE_TEL = "+393928080172";
   var MENU = "menu.html";
-  var MAPS = "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("Via Rossello 22, 17027 Pietra Ligure SV");
+  var MAPS = "https://maps.app.goo.gl/s2BJmBZZ4Pka1fGH6";
   function wa(lang) {
     var msg = lang === "en"
       ? "Hello! I'd like to book a table at Il Gusto. Date: ___ Time: ___ People: ___"
