@@ -47,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/style.css?v=3" />
+  <link rel="stylesheet" href="assets/style.css?v=5" />
 
   <!-- ============== SEO: Structured Data (Schema.org Restaurant) ============== -->
   <script type="application/ld+json">
@@ -95,12 +95,12 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Sunday"],
-        "opens": "12:00", "closes": "23:00"
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "18:00", "closes": "00:00"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Friday","Saturday"],
+        "dayOfWeek": ["Saturday","Sunday"],
         "opens": "12:00", "closes": "00:00"
       }
     ],
@@ -164,7 +164,7 @@
   <section class="hero" id="home">
     <div class="hero-inner">
       <span class="hero-divider">Dal 1998</span>
-      <h1>Il Sapore <em>del Mare</em>,<br>l'Anima d'Italia</h1>
+      <h1 data-en="The Taste <em>of the Sea</em>,<br>the Soul of Italy">Il Sapore <em>del Mare</em>,<br>l'Anima d'Italia</h1>
       <p class="lead">Ristorante di pesce e pizzeria nel cuore di Pietra Ligure (SV): pescato fresco di giornata, pasta fatta a mano, pizza e una cantina di vini pregiati — serviti con il calore di una vera tavola italiana.</p>
       <div class="hero-actions">
         <a class="btn btn-gold" href="menu.html">Scopri il Menù</a>
@@ -179,10 +179,11 @@
     <div class="wrap about-grid">
       <div class="about-copy reveal">
         <p class="eyebrow dark">La nostra storia</p>
-        <h2>Una tavola di famiglia, con il miglior pescato del giorno</h2>
-        <p>Da oltre venticinque anni Il Gusto accoglie i suoi ospiti in un luogo dove il mare incontra la cucina italiana. Ogni mattina il nostro banco si riempie di pesce intero, frutti di mare, calamari e gamberoni sul ghiaccio — scelti a mano, preparati con semplicità e serviti come si deve.</p>
-        <p>Dalle linguine ai frutti di mare ai ravioli fatti freschi ogni giorno, fino alle tagliate alla griglia, la nostra cucina onora la tradizione senza fronzoli. Accompagna il tutto con una bottiglia della nostra cantina e lascia che la serata scorra.</p>
-        <p>Vieni con appetito. Esci come in famiglia.</p>
+        <h2>Benvenuti a Il Gusto</h2>
+        <p>Il nostro ristorante nasce dalla passione per la cucina e dall'attenzione ai dettagli. Offriamo un menu alla carta che unisce piatti di carne e di pesce, preparati con ingredienti freschi e selezionati.</p>
+        <p>La nostra proposta valorizza la tradizione con un tocco di creatività, per regalare sapori autentici e sempre equilibrati. Proponiamo inoltre opzioni senza glutine, curate con la stessa attenzione e qualità, per garantire un'esperienza inclusiva e gustosa per tutti.</p>
+        <p>L'ambiente è accogliente e familiare, perfetto per ogni occasione: da una cena rilassante a momenti speciali da condividere. Completa l'esperienza una selezione di vini scelti con cura, ideali per accompagnare ogni portata.</p>
+        <p>Vi aspettiamo per farvi sentire a casa, con semplicità e passione.</p>
         <a class="btn btn-outline" href="#highlights" style="margin-top:10px">Scopri le nostre specialità</a>
       </div>
       <div class="about-figure reveal">
@@ -201,7 +202,6 @@
       <div class="section-head reveal">
         <p class="eyebrow">Dalla nostra cucina</p>
         <h2>Le Specialità della Casa</h2>
-        <p>Alcuni dei piatti per cui i nostri clienti attraversano la città.</p>
       </div>
       <div class="feature-grid">
         <article class="feature reveal">
@@ -209,7 +209,6 @@
           <div class="feature-body">
             <span class="tag">Primi · Pasta</span>
             <h3>Linguine Scampi e Calamari</h3>
-            <p>Linguine con scampi e calamari freschi, in un sugo delicato di mare.</p>
           </div>
         </article>
         <article class="feature reveal">
@@ -217,7 +216,6 @@
           <div class="feature-body">
             <span class="tag">Secondi · Mare</span>
             <h3>Grigliata Mista di Pesce</h3>
-            <p>Una scelta del pescato del giorno alla griglia — pesce, calamari e crostacei.</p>
           </div>
         </article>
         <article class="feature reveal">
@@ -225,7 +223,6 @@
           <div class="feature-body">
             <span class="tag">Antipasti · Crudo</span>
             <h3>Tartare &amp; Crudi di Mare</h3>
-            <p>Tartare di tonno, ostriche e cocktail di gamberoni, freschezza del banco del pesce.</p>
           </div>
         </article>
         <article class="feature reveal">
@@ -233,7 +230,6 @@
           <div class="feature-body">
             <span class="tag">Primi · Fatto a mano</span>
             <h3>Ravioli di Borragine</h3>
-            <p>Ravioli conditi con burro e salvia — perché certe cose non vanno mai di fretta.</p>
           </div>
         </article>
         <article class="feature reveal">
@@ -241,7 +237,6 @@
           <div class="feature-body">
             <span class="tag">Dalla griglia · Carne</span>
             <h3>Tagliata di Angus</h3>
-            <p>Tagliata di Angus argentino con patate al forno, profumata al rosmarino e finita sulla fiamma.</p>
           </div>
         </article>
         <article class="feature reveal">
@@ -249,7 +244,6 @@
           <div class="feature-body">
             <span class="tag">Cantina · Vini</span>
             <h3>La Cantina</h3>
-            <p>Dal vino della casa alle bollicine — una selezione su cui vale la pena indugiare.</p>
           </div>
         </article>
       </div>
@@ -261,7 +255,6 @@
     <div class="wrap reveal">
       <p class="eyebrow">Prenotazioni</p>
       <h2>Ti aspetta una serata di mare</h2>
-      <p>Nei fine settimana i tavoli si riempiono in fretta. Prenota in anticipo e pensiamo a tutto noi.</p>
       <a class="btn btn-gold" href="#contact">Prenota un Tavolo</a>
     </div>
   </section>
@@ -336,10 +329,13 @@
 
           <h3 style="margin-top:30px">Orari di Apertura</h3>
           <ul class="hours-list">
-            <li><span>Lunedì</span><span>Chiuso</span></li>
-            <li><span>Martedì – Giovedì</span><span>12:00 – 23:00</span></li>
-            <li><span>Venerdì – Sabato</span><span>12:00 – 00:00</span></li>
-            <li><span>Domenica</span><span>12:00 – 23:00</span></li>
+            <li><span>Lunedì</span><span>18.00 - 00.00</span></li>
+            <li><span>Martedì</span><span>18.00 - 00.00</span></li>
+            <li><span>Mercoledì</span><span>18.00 - 00.00</span></li>
+            <li><span>Giovedì</span><span>18.00 - 00.00</span></li>
+            <li><span>Venerdì</span><span>18.00 - 00.00</span></li>
+            <li><span>Sabato</span><span>12.00 - 00.00</span></li>
+            <li><span>Domenica</span><span>12.00 - 00.00</span></li>
           </ul>
 
           <div class="contact-socials">
@@ -401,5 +397,7 @@
   </div>
 
   <script src="assets/main.js"></script>
+  <script src="assets/i18n.js"></script>
+  <script src="assets/chat.js"></script>
 </body>
 </html>

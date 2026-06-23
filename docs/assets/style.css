@@ -397,3 +397,45 @@ h1, h2, h3 { letter-spacing: .005em; }
 /* ---- Header brand: a touch more refinement ---- */
 .brand-text { letter-spacing: .03em; }
 .brand-sub { letter-spacing: .36em; }
+
+/* ---------- Assistant chat widget ---------- */
+.ai-widget { position: fixed; right: 18px; bottom: 18px; z-index: 80; font-family: var(--sans); }
+.ai-fab { width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer; background: var(--green); color: var(--gold-soft); box-shadow: 0 14px 34px -10px rgba(0,0,0,.55); display: grid; place-items: center; transition: transform .2s ease, background .2s ease; }
+.ai-fab:hover { transform: translateY(-2px); background: var(--green-deep); }
+.ai-fab svg { width: 26px; height: 26px; }
+.ai-fab .ic-close { display: none; }
+.ai-open .ai-fab .ic-chat { display: none; }
+.ai-open .ai-fab .ic-close { display: block; }
+.ai-panel { position: absolute; right: 0; bottom: 72px; width: min(92vw, 360px); height: min(72vh, 540px);
+  background: #fff; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 26px 64px -22px rgba(0,0,0,.55);
+  display: flex; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(12px) scale(.98);
+  pointer-events: none; transition: opacity .22s ease, transform .22s ease; }
+.ai-open .ai-panel { opacity: 1; transform: none; pointer-events: auto; }
+.ai-head { background: linear-gradient(160deg, var(--green), var(--green-deep)); color: #fff; padding: 13px 16px; display: flex; align-items: center; gap: 11px; }
+.ai-head .ai-dot { width: 9px; height: 9px; border-radius: 50%; background: #7ee0a6; box-shadow: 0 0 0 3px rgba(126,224,166,.25); flex: none; }
+.ai-head b { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; line-height: 1.1; }
+.ai-head small { display: block; opacity: .82; font-size: .68rem; letter-spacing: .05em; }
+.ai-head .ai-close { margin-left: auto; background: none; border: 0; color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; padding: 0 4px; }
+.ai-body { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
+.ai-msg { max-width: 86%; padding: 10px 13px; border-radius: 13px; font-size: .92rem; line-height: 1.45; }
+.ai-msg.bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 3px; color: var(--ink); }
+.ai-msg.user { background: var(--green); color: #fff; align-self: flex-end; border-bottom-right-radius: 3px; }
+.ai-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ai-actions a { display: inline-block; padding: 8px 13px; border-radius: 22px; font-size: .82rem; font-weight: 500; text-decoration: none; border: 1px solid var(--green); color: var(--green); background: #fff; transition: .2s ease; }
+.ai-actions a:hover { background: var(--green); color: #fff; }
+.ai-quick { display: flex; flex-wrap: wrap; gap: 8px; padding: 11px 14px; border-top: 1px solid var(--line); background: #fff; }
+.ai-chip { padding: 8px 12px; border-radius: 22px; font-size: .82rem; font-weight: 500; cursor: pointer; border: 1px solid var(--line); color: var(--green-deep); background: var(--cream); transition: .2s ease; font-family: var(--sans); }
+.ai-chip:hover { background: var(--green); color: #fff; border-color: var(--green); }
+.ai-input { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: #fff; }
+.ai-input input { flex: 1; border: 1px solid var(--line); border-radius: 22px; padding: 9px 14px; font-size: .9rem; font-family: var(--sans); outline: none; }
+.ai-input input:focus { border-color: var(--green); }
+.ai-input button { border: 0; background: var(--green); color: #fff; border-radius: 50%; width: 38px; height: 38px; flex: none; cursor: pointer; display: grid; place-items: center; }
+.ai-input button svg { width: 18px; height: 18px; }
+body.nav-locked .ai-widget { display: none; }
+@media (max-width: 480px) { .ai-panel { width: 92vw; height: 76vh; } }
+
+/* ---------- Language switch (IT / EN) ---------- */
+.lang-switch { display: inline-flex; align-items: center; margin-left: auto; margin-right: 14px; border: 1px solid currentColor; border-radius: 20px; overflow: hidden; opacity: .85; }
+.lang-switch button { background: none; border: 0; padding: 5px 10px; cursor: pointer; font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: inherit; line-height: 1; transition: background .2s ease, color .2s ease; }
+.lang-switch button.active { background: var(--gold); color: var(--charcoal); }
+@media (max-width: 680px) { .lang-switch { margin-right: 10px; } }
