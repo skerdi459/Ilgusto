@@ -165,6 +165,13 @@ body.nav-locked { overflow: hidden; }
 }
 .about-figure .badge strong { font-family: var(--serif); font-size: 2.4rem; display: block; color: var(--gold-soft); line-height: 1; }
 .about-figure .badge span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; }
+.aic-cert {
+  display: flex; align-items: center; gap: 18px; margin: 8px 0 22px;
+  padding: 14px 18px; border: 1px solid var(--line); border-radius: 6px; background: #fff;
+}
+.aic-cert img { width: 150px; height: auto; flex: 0 0 auto; border-radius: 4px; }
+.aic-cert p { margin: 0; font-size: .9rem; color: var(--ink-soft); line-height: 1.45; }
+@media (max-width: 560px) { .aic-cert { flex-direction: column; text-align: center; gap: 12px; } }
 
 /* ---------- Highlights ---------- */
 .highlights { background: var(--charcoal); color: #fff; }
