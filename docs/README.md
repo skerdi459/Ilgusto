@@ -28,7 +28,7 @@ Then open http://localhost:8080
 
 ## Live URLs & SEO
 Canonical/sitemap/Open Graph URLs point to the GitHub Pages address
-`https://skerdi459.github.io/Ilgusto/`. If you move to a custom domain,
+`https://www.ristoranteilgusto.it/`. If you move to a custom domain,
 search-and-replace that base URL in `index.html`, `menu.html`, `robots.txt`
 and `sitemap.xml`, and add a `CNAME` file in `docs/`.
 

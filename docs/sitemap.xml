@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://skerdi459.github.io/Ilgusto/</loc>
+    <loc>https://www.ristoranteilgusto.it/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://skerdi459.github.io/Ilgusto/assets/img/about-hero.jpg</image:loc>
+      <image:loc>https://www.ristoranteilgusto.it/assets/img/about-hero.jpg</image:loc>
       <image:caption>Il Gusto — pescato fresco del giorno a Pietra Ligure</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://skerdi459.github.io/Ilgusto/assets/img/grill-platter.jpg</image:loc>
+      <image:loc>https://www.ristoranteilgusto.it/assets/img/grill-platter.jpg</image:loc>
       <image:caption>Grigliata mista di pesce</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://skerdi459.github.io/Ilgusto/menu.html</loc>
+    <loc>https://www.ristoranteilgusto.it/menu.html</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
